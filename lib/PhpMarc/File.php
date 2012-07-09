@@ -1,8 +1,6 @@
 <?php
 
-namespace phpMARC21;
-
-include('Constants.php');
+namespace PhpMarc;
 
 /**
  * Class File
@@ -16,6 +14,36 @@ Class File {
 	 * ========== VARIABLE DECLARATIONS ==========
 	 */
 	
+	/**
+	 * Hexadecimal value for Subfield indicator
+	 * @global hex SUBFIELD_INDICATOR
+	 */
+	const SUBFIELD_INDICATOR = "\x1F";
+
+	/**
+	 * Hexadecimal value for End of Field
+	 * @global hex END_OF_FIELD
+	 */
+	const END_OF_FIELD = "\x1E";
+
+	/**
+	 * Hexadecimal value for End of Record
+	 * @global hex END_OF_RECORD
+	 */
+	const END_OF_RECORD = "\x1D";
+
+	/**
+	 * Length of the Directory
+	 * @global integer DIRECTORY_ENTRY_LEN
+	 */
+	const DIRECTORY_ENTRY_LEN = 12;
+
+	/**
+	 * Length of the Leader
+	 * @global integer LEADER_LEN
+	 */
+	const LEADER_LEN = 24;
+
 	/**
 	 * Array containing raw records
 	 * @var array

@@ -11,5 +11,5 @@ This is php-marc.php packaged for use with Composer.
 
 ##Authors
 
-    [Christoffer Landtman](mailto:landtman@realnode.com) - Original Author
-    [Grant Gingell](mailto:ggingell@fsu.edu) - Repackaged and Updated
+    Christoffer Landtman <landtman@realnode.com> - Original Author
+    Grant Gingell <ggingell@fsu.edu> - Repackaged and Updated

@@ -1,8 +1,6 @@
 <?php
 
-namespace phpMARC21;
-
-include('Constants.php');
+namespace PhpMarc;
 
 /**
  * USMARC Class

@@ -1,8 +1,6 @@
 <?php 
 
-namespace phpMARC21;
-
-include('Constants.php');
+namespace PhpMarc;
 
 /**
  * Record Class
@@ -14,6 +12,30 @@ Class Record {
 	 * ========== VARIABLE DECLARATIONS ==========
 	 */
 	
+	/**
+	 * Hexadecimal value for End of Field
+	 * @global hex END_OF_FIELD
+	 */
+	const END_OF_FIELD = "\x1E";
+
+	/**
+	 * Hexadecimal value for End of Record
+	 * @global hex END_OF_RECORD
+	 */
+	const END_OF_RECORD = "\x1D";
+
+	/**
+	 * Length of the Directory
+	 * @global integer DIRECTORY_ENTRY_LEN
+	 */
+	const DIRECTORY_ENTRY_LEN = 12;
+
+	/**
+	 * Length of the Leader
+	 * @global integer LEADER_LEN
+	 */
+	const LEADER_LEN = 24;
+
 	/**
 	 * Contain all @link Field objects of the Record
 	 * @var array

@@ -1,8 +1,6 @@
 <?php
 
-namespace phpMARC21;
-
-include('Constants.php');
+namespace PhpMarc;
 
 /**
  * Field Class
@@ -13,6 +11,18 @@ Class Field {
 	/**
 	 * ========== VARIABLE DECLARATIONS ==========
 	 */
+
+	/**
+	 * Hexadecimal value for Subfield indicator
+	 * @global hex SUBFIELD_INDICATOR
+	 */
+	const SUBFIELD_INDICATOR = "\x1F";
+
+	/**
+	 * Hexadecimal value for End of Field
+	 * @global hex END_OF_FIELD
+	 */
+	const END_OF_FIELD = "\x1E";
 	
 	/**
 	 * The tag name of the Field
