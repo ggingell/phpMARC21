@@ -1,5 +1,5 @@
 {
-    "name": "ggingell/PhpMarc",
+    "name": "ggingell/phpMARC21",
     "type": "library",
     "description": "MARC Record handling tool for PHP",
     "keywords": ["MARC", "conversion", "format", "library"],
