@@ -125,7 +125,7 @@ Class Record {
 	 * @param Field The field to append
 	 */
 	function append_fields($field) {
-		if(strtolower(get_class($field)) == "field") {
+		if(strtolower(get_class($field)) == "PhpMarc\\Field") {
 			$this->fields[$field->tagno][] = $field;
 		} else {
 			$this->_croak(sprintf("Given argument must be Field object, but was '%s'", get_class($field)));

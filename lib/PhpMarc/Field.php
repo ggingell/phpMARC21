@@ -272,7 +272,7 @@ Class Field {
 	 * @param Field Field to replace with
 	 */
 	function replace_with($obj) {
-		if(strtolower(get_class($obj)) == "field") {
+		if(strtolower(get_class($obj)) == "PhpMarc\\Field") {
 			$this->tagno = $obj->tagno;
 			$this->ind1 = $obj->ind1;
 			$this->ind2 = $obj->ind2;
