@@ -92,11 +92,11 @@ Class Record {
 	 */
 	
 	/**
-	 * Start function
+	 * Constructor
 	 *
 	 * Set all variables to defaults to create new Record object
 	 */
-	function record() {
+	function __construct() {
 		$this->fields = array();
 		$this->ldr = str_repeat(' ', 24);
 	}
