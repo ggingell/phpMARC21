@@ -100,13 +100,13 @@ Class Field {
 	 */
 	
 	/**
-	 * Field init function
+	 * Constructor
 	 *
 	 * Create a new Field object from passed arguments
 	 * @param array Array ( tagno, ind1, ind2, subfield_data )
 	 * @return string Returns warnings if any issued during parse
 	 */
-	function field() {
+	function __construct() {
 		$args = func_get_args();
 		
 		$tagno = array_shift($args);
