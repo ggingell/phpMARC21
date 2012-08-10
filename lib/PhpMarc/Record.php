@@ -53,6 +53,26 @@ Class Record {
 	var $warn;
 	
 	/**
+	 * Constant Getters
+	 */
+
+	public static function getEndOfField() {
+		return self::END_OF_FIELD;
+	}
+	
+	public static function getEndOfRecord() {
+		return self::END_OF_RECORD;
+	}
+
+	public static function getDirectoryEntryLen() {
+		return self::DIRECTORY_ENTRY_LEN;
+	}
+
+	public static function getLeaderLen() {
+		return self::LEADER_LEN;
+	}
+
+	/**
 	 * ========== ERROR FUNCTIONS ==========
 	 */
 	
@@ -162,8 +182,8 @@ Class Record {
 		 * Rules from MARC::Record::USMARC
 		 */
         $baseaddress =
-                LEADER_LEN +    // better be 24
-                ( count($directory) * DIRECTORY_ENTRY_LEN ) +
+                $this->getLeaderLen() +    // better be 24
+                ( count($directory) * $this->getDirectoryEntryLen() ) +
                                 // all the directory entries
                 1;              // end-of-field marker
 
@@ -308,7 +328,7 @@ Class Record {
 		/**
 		 * Glue together all parts
 		 */
-		return $this->ldr.implode("", $directory).END_OF_FIELD.implode("", $fields).END_OF_RECORD;
+		return $this->ldr.implode("", $directory).$this->getEndOfField().implode("", $fields).$this->getEndOfRecord();
 	}
     
 	/**

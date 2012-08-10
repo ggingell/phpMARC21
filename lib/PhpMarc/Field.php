@@ -59,9 +59,21 @@ Class Field {
 	 * @var string
 	 */
 	var $data;
-	
+
 	/**
-	 * ========== ERROR FUNCTIONS ==========
+	 * Constant Getters
+	 */
+
+	public static function getEndOfField() {
+		return self::END_OF_FIELD;
+	}
+	
+	public static function getSubFieldIndicator() {
+		return self::SUBFIELD_INDICATOR;
+	}
+
+	/**
+	 * Error Functions
 	 */
 	
 	/**
@@ -94,9 +106,9 @@ Class Field {
 	function warnings() {
 		return $this->warn;
 	}
-	
+
 	/**
-	 * ========== PROCESSING FUNCTIONS ==========
+	 * Processing Functions
 	 */
 	
 	/**
@@ -335,13 +347,13 @@ Class Field {
 	 */
 	function raw() {
 		if($this->is_control) {
-			return $this->data.END_OF_FIELD;
+			return $this->data.$this->getEndOfField();
 		} else {
 			$subfields = array();
 			foreach ($this->subfields as $subfield => $value) {
-				$subfields[] = SUBFIELD_INDICATOR.$subfield.$value;
+				$subfields[] = $this->getSubFieldIndicator().$subfield.$value;
 			}
-			return $this->ind1.$this->ind2.implode("", $subfields).END_OF_FIELD;
+			return $this->ind1.$this->ind2.implode("", $subfields).$this->getEndOfField();
 		}
 	}
 	
